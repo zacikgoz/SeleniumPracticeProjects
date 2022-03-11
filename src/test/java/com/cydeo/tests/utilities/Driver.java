@@ -3,6 +3,7 @@ package com.cydeo.tests.utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
@@ -42,6 +43,13 @@ public class Driver {
 
         }
         return driver;
+    }
+    @Test
+    public static void closeDriver(){
+        if(driver != null){
+            driver.quit();
+            driver=null;
+        }
     }
 
     //driver.quit();
