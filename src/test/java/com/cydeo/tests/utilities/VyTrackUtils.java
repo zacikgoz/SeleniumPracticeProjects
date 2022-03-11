@@ -33,5 +33,8 @@ public class VyTrackUtils {
         Driver.getDriver().findElement(By.xpath("//*[@id='prependedInput2']")).sendKeys(ConfigurationReader.getProperty("store_manager_password"));
         Driver.getDriver().findElement(By.xpath("//*[@id='_submit']")).click();
     }
+    public static void sayHello(String name) {
+        System.out.println("Hello"+name);
+    }
 
 }
